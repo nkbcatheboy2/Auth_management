@@ -35,7 +35,7 @@ $user = $_SESSION['user'];
             </form>
         </div>
 
-        <!-- Project Logs -->
+        
         <?php if($role != 'gatekeeper'): ?>
         <div class="card">
             <h3>Project Estimation Logs</h3>
@@ -71,7 +71,7 @@ $user = $_SESSION['user'];
         </div>
         <?php endif; ?>
 
-        <!-- Staff List & Management (Admin Only) -->
+        
         <?php if($role == 'admin'): ?>
         <div class="card">
             <h3>Staff Management</h3>
