@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// 1. Save Project
+
 if(isset($_POST['save_proj'])){
     $stmt = $conn->prepare("INSERT INTO projects (client_name, mobile, work_type, budget, team_size, project_head, remarks) VALUES (?,?,?,?,?,?,?)");
     $bud = $_POST['budget'] ?? 0; $team = $_POST['team'] ?? 0; $head = $_POST['head'] ?? ''; $rem = $_POST['remarks'] ?? '';
@@ -10,7 +10,7 @@ if(isset($_POST['save_proj'])){
     header("Location: dashboard.php?msg=Record Saved");
 }
 
-// 2. Add Staff
+
 if(isset($_POST['add_staff'])){
     $u = $_POST['u'];
     $p = password_hash($_POST['p'], PASSWORD_DEFAULT);
@@ -23,7 +23,6 @@ if(isset($_POST['add_staff'])){
     }
 }
 
-// 3. Admin Actions (Delete/Approve)
 if(isset($_GET['approve'])){
     mysqli_query($conn, "UPDATE projects SET status='approved' WHERE id=".$_GET['approve']);
     header("Location: dashboard.php?msg=Approved");
