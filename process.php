@@ -38,7 +38,7 @@ if(isset($_GET['del_staff'])){
     header("Location: dashboard.php?msg=Staff Removed");
 }
 
-// 4. Update Project
+
 if(isset($_POST['update_proj'])){
     $id = $_POST['id']; $b = $_POST['budget']; $rem = $_POST['remarks'];
     mysqli_query($conn, "UPDATE projects SET budget='$b', remarks='$rem' WHERE id='$id'");
