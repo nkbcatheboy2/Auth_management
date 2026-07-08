@@ -1,7 +1,10 @@
 <?php include 'db.php'; ?>
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="style.css"><title>Login</title></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
 <body style="display:flex; align-items:center; justify-content:center; height:100vh;">
     <div class="card" style="width:400px; text-align:center;">
         <h1 style="margin-bottom:20px;">ESPL Login</h1>
